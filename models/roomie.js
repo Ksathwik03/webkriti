@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const roomieSchema = new mongoose.Schema({
-  userId: {
+  email: {
     type: String,
     required: true
   },
@@ -9,14 +9,10 @@ const roomieSchema = new mongoose.Schema({
       type: String,
       required: true
   },
-  description :{
+  About :{
     type: String,
     required: true
   },
-  rool_no :{
-    type: String,
-    required: true
-  }
   
 },{ timestamps: true });
 

@@ -44,6 +44,7 @@ app.use(
 
 app.use("/", require("./Routes/user"));
 app.use("/room", require("./Routes/room"));
+app.use("/roomie", require("./Routes/roomie"));
 
 const PORT = process.env.PORT || 4001;
 server.listen(PORT, console.log(`Server started on port ${PORT}`));
