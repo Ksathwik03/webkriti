@@ -34,6 +34,7 @@ exports.addProfile = async (req, res, next) => {
       token:token
     });
   } catch (err) {
+    console.log(err)
     return res.json({
       success: false,
       error: `Error Adding User: ${err}`,
@@ -49,7 +50,7 @@ exports.login = async (req, res, next) => {
       const { email, password } = req.body;
       
       if (!(password || email)) {
-        res.status(400).json({
+        res.status(203).json({
           success: false,
           error: "Username and password are required"});
       }
@@ -65,7 +66,7 @@ exports.login = async (req, res, next) => {
           data:user,
           token:token });
       }
-      return res.status(400).json({
+      return res.status(202).json({
         success: false,
         error: `Invalid credentials`,
       });

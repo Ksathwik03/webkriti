@@ -61,7 +61,7 @@ exports.vacateRoom = async(req,res) => {
 
 exports.getAllRooms = async(req,res) => {
     try{
-        let room = await Room.find({})
+        let room = await Room.find({}).sort('roomNumber')
         return res.json({
             stats: 200,
             sucess: "Successfully fetched allocated rooms",
