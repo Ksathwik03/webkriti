@@ -42,6 +42,7 @@ app.use(
     })
 );
 
+app.use("/", require("./Routes/user"));
 app.use("/room", require("./Routes/room"));
 
 const PORT = process.env.PORT || 4001;
